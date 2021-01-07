@@ -22,10 +22,6 @@ export default function Home({ countries }) {
   return (
     <Layout>
       <div className={styles.inputContainer}>
-        <div className={styles.counts}>
-          Found {countries.length}{" "}
-          {countries.length > 1 ? "countries" : "country"}
-        </div>
         <div className={styles.input}>
           <SearchInput
             placeholder="Search by Name, Region, or Subregion"

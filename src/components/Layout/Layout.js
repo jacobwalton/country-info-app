@@ -9,9 +9,11 @@ const Layout = ({ children, title = "Country Info" }) => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Link href="/">
-        <header className={styles.header}>Country Info</header>
-      </Link>
+      <header className={styles.header}>
+        <Link href="/">
+          <h1 style={{ display: "inline" }}>Country Info</h1>
+        </Link>
+      </header>
 
       <main className={styles.main}>{children}</main>
 
