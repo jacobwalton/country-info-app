@@ -1,8 +1,17 @@
 import Layout from "../components/Layout/Layout";
+import SearchInput from "../components/SearchInput/SearchInput";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
-  return <Layout>Main</Layout>;
+export default function Home({ countries }) {
+  return (
+    <Layout>
+      <div className={styles.counts}>
+        Found {countries.length}{" "}
+        {countries.length > 1 ? "countries" : "country"}
+      </div>
+      <SearchInput placeholder="Search by Name, Region, or Subregion" />
+    </Layout>
+  );
 }
 
 export const getStaticProps = async () => {
@@ -12,7 +21,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      countries,
+      countries: countries,
     },
   };
 };
