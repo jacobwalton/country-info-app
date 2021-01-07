@@ -6,8 +6,11 @@ import { useState } from "react";
 
 export default function Home({ countries }) {
   const [query, setQuery] = useState("");
-  const filteredCountries = countries.filter((country) =>
-    country.name.toLowerCase().includes(query)
+  const filteredCountries = countries.filter(
+    (country) =>
+      country.name.toLowerCase().includes(query) ||
+      country.region.toLowerCase().includes(query) ||
+      country.subregion.toLowerCase().includes(query)
   );
 
   const onInputChange = (e) => {
