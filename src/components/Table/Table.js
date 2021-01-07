@@ -1,3 +1,4 @@
+import numeral from "numeral";
 import { useState } from "react";
 import {
   KeyboardArrowDownRounded,
@@ -105,9 +106,13 @@ const Table = ({ countries }) => {
 
             <div className={styles.name}>{country.name}</div>
 
-            <div className={styles.population}>{country.population}</div>
+            <div className={styles.population}>
+              {numeral(country.population).format("0.0a")}
+            </div>
 
-            <div className={styles.area}>{country.area || 0}</div>
+            <div className={styles.area}>
+              {numeral(country.area || 0).format("0.0a")}
+            </div>
 
             <div className={styles.gini}>{country.gini || 0} %</div>
           </div>
