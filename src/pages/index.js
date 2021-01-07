@@ -2,17 +2,32 @@ import Layout from "../components/Layout/Layout";
 import SearchInput from "../components/SearchInput/SearchInput";
 import Table from "../components/Table/Table";
 import styles from "../styles/Home.module.css";
+import { useState } from "react";
 
 export default function Home({ countries }) {
+  const [query, setQuery] = useState("");
+  const filteredCountries = countries.filter((country) =>
+    country.name.toLowerCase().includes(query)
+  );
+
+  const onInputChange = (e) => {
+    e.preventDefault();
+
+    setQuery(e.target.value.toLowerCase());
+  };
+
   return (
     <Layout>
       <div className={styles.counts}>
         Found {countries.length}{" "}
         {countries.length > 1 ? "countries" : "country"}
       </div>
-      <SearchInput placeholder="Search by Name, Region, or Subregion" />
+      <SearchInput
+        placeholder="Search by Name, Region, or Subregion"
+        onChange={onInputChange}
+      />
 
-      <Table countries={countries} />
+      <Table countries={filteredCountries} />
     </Layout>
   );
 }

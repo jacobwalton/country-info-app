@@ -15,10 +15,22 @@
   padding: 20px;
   color: var(--text-secondary);
   font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headingName {
-  text-align: left;
+  justify-content: flex-start;
+}
+
+.headingArrow {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
 }
 
 .row {
