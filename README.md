@@ -7,7 +7,7 @@
 
 An easy to use application which allows the user to search sort countries by various parameters.
 
-_Deployed here via Vercel:_ https://country-info-app-dun.vercel.app/
+_Deployed here via Vercel:_ https://country-info-app.vercel.app/
 
 # Table of Contents:
 
