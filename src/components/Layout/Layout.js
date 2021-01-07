@@ -1,3 +1,4 @@
+import Link from "next/Link";
 import Head from "next/head";
 import styles from "./Layout.module.css";
 
@@ -8,7 +9,10 @@ const Layout = ({ children, title = "Country Info" }) => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={styles.header}>Country Info App</header>
+      <Link href="/">
+        <header className={styles.header}>Country Info</header>
+      </Link>
+
       <main className={styles.main}>{children}</main>
 
       <footer className={styles.footer}>
