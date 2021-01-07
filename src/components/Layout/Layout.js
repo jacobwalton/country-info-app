@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import styles from "./Layout.module.css";
+import styles from "./layout.module.css";
 
 const Layout = ({ children, title = "Country Info" }) => {
   return (
