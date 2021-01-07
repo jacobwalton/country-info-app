@@ -1,13 +1,25 @@
 import styles from "./table.module.css";
+
+const orderBy = (countries, direction) => {
+  if (direction == "asc") {
+    return countries.sort((a, b) => (a.population > b.population ? 1 : -1));
+  }
+  if (direction === "desc") {
+    return countries.sort((a, b) => (a.population > b.population ? -1 : 1));
+  }
+  return countries;
+};
+
 const Table = ({ countries }) => {
+  const orderedCountries = orderBy(countries, "desc");
   return (
     <div>
       <div className={styles.heading}>
-        <button>
-          <div className={styles.headingName}>Name</div>
+        <button className={styles.headingName}>
+          <div>Name</div>
         </button>
-        <button>
-          <div className={styles.headingPopulation}>Population</div>
+        <button className={styles.headingPopulation}>
+          <div>Population</div>
         </button>
       </div>
       {countries.map((country) => (
