@@ -1,0 +1,38 @@
+.heading {
+  display: flex;
+}
+
+.heading button {
+  border: none;
+  background-color: transparent;
+}
+
+.headingName,
+.headingPopulation {
+  flex: 1;
+  padding: 20px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.headingName {
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--background-color-light);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+.name {
+  flex: 1;
+  text-align: left;
+}
+.population {
+  flex: 1;
+}

@@ -1,5 +1,6 @@
 import Layout from "../components/Layout/Layout";
 import SearchInput from "../components/SearchInput/SearchInput";
+import Table from "../components/Table/Table";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ countries }) {
@@ -10,6 +11,8 @@ export default function Home({ countries }) {
         {countries.length > 1 ? "countries" : "country"}
       </div>
       <SearchInput placeholder="Search by Name, Region, or Subregion" />
+
+      <Table countries={countries} />
     </Layout>
   );
 }
