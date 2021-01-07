@@ -1,13 +1,13 @@
 # News App
 
-![Languages badge](https://img.shields.io/github/languages/count/jawalton6616/country-info)
-![Last commit badge](https://img.shields.io/github/last-commit/jawalton6616/country-info)
+![Languages badge](https://img.shields.io/github/languages/count/jawalton6616/country-info-app)
+![Last commit badge](https://img.shields.io/github/last-commit/jawalton6616/country-info-app)
 
 ## Description:
 
 An easy to use application which allows the user to search sort countries by various parameters.
 
-_Deployed here via Vercel:_ https://country-info-dun.vercel.app/
+_Deployed here via Vercel:_ https://country-info-app-dun.vercel.app/
 
 # Table of Contents:
 
