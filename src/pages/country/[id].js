@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import styles from "./country.module.css";
+import Link from "next/link";
 
 const getCountry = async (id) => {
   const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${id}`);
@@ -91,13 +92,15 @@ const Country = ({ country }) => {
               <div className={styles.borderLabel}>Neighboring countries</div>
 
               <div className={styles.panelContainer}>
-                {borders.map(({ flag, name }) => (
+                {borders.map(({ flag, name, alpha3Code }) => (
                   <div className={styles.borderCountry}>
-                    <img
-                      src={flag}
-                      alt={name}
-                      className={styles.BorderFlag}
-                    ></img>
+                    <Link href={`/country/${alpha3Code}`}>
+                      <img
+                        src={flag}
+                        alt={name}
+                        className={styles.borderFlag}
+                      ></img>
+                    </Link>
                     <div className={styles.borderName}>{name}</div>
                   </div>
                 ))}

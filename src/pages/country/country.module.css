@@ -88,6 +88,10 @@
   gap: 24px;
 }
 
+.borderFlag {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 720px) {
   .container {
     display: grid;
